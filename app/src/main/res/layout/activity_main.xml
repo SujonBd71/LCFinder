@@ -19,7 +19,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/emailID"
+        android:id="@+id/probID"
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_marginLeft="50dp"
@@ -34,7 +34,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_below="@id/emailID"
+        android:layout_below="@id/probID"
         android:text="Find"
         android:onClick="find"/>
 </RelativeLayout>

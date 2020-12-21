@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.lcfinder.model.ProblemRepo;
@@ -31,7 +32,9 @@ public class MainActivity extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void find(View view){
-        String url = repo.findUrlGivenId("1683");
+        EditText idText = (EditText) (findViewById(R.id.probID));
+        String id = idText.getText().toString();
+        String url = repo.findUrlGivenId(id);
         Uri uri = Uri.parse(url); // missing 'http://' will cause crashed
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
